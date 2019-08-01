@@ -1,7 +1,9 @@
 variable "ssh_key" {}
+variable "ibmcloud_apikey" {}
 
 provider "ibm" {
   generation = 1
+  ibmcloud_api_key   = "${var.ibmcloud_apikey}"
 }
 
 locals {
